@@ -30,6 +30,62 @@
     <label> Uso de Moto:</label> <input type="checkbox" name="uso_moto"><br>
     <label> Dirección:</label> <input type="text" name="direccion"><br>
     <label> Número:</label> <input type="text" name="numero"><br>
+    <label> Barrio: </label>
+    <select type="text" name="barrio">
+        <option>Agronomía</option>
+        <option>Almagro</option>
+        <option>Balvanera</option>
+        <option>Barracas</option>
+        <option>Belgrano</option>
+        <option>Boca</option>
+        <option>Boedo</option>
+        <option>Caballito</option>
+        <option>Coghlan</option>
+        <option>Colegiales</option>
+        <option>Constitución</option>
+        <option>Flores</option>
+        <option>Floresta</option>
+        <option>Liniers</option>
+        <option>Mataderos</option>
+        <option>Monte Castro</option>
+        <option>Montserrat</option>
+        <option>Nueva Pompeya</option>
+        <option>Nuñez</option>
+        <option>Palermo</option>
+        <option>Parque Avellaneda</option>
+        <option>Parque Chacabuco</option>
+        <option>Parque Chas</option>
+        <option>Parque Patricios</option>
+        <option>Paternal</option>
+        <option>Puerto Madero</option>
+        <option>Recoleta</option>
+        <option>Retiro</option>
+        <option>Saavedra</option>
+        <option>San Cristóbal</option>
+        <option>San Nicolás</option>
+        <option>San Telmo</option>
+        <option>Versalles</option>
+        <option>Villa Crespo</option>
+        <option>Villa Devoto</option>
+        <option>Villa General Mitre</option>
+        <option>Villa Lugano</option>
+        <option>Villa Luro</option>
+        <option>Villa Ortúzar</option>
+        <option>Villa Pueyrredón</option>
+        <option>Villa Real</option>
+        <option>Villa Riachuelo</option>
+        <option>Villa Santa Rita</option>
+        <option>Villa Soldati</option>
+        <option>Villa Urquiza</option>
+        <option>Villa del Parque</option>
+        <option>Vélez Sarsfield</option>
+    </select>
+    <br>
+    <br>
+    <br>
+    <br>
+
     <button type="submit">Guardar</button>
+    <button> <a href="{{ url_for('index') }}">Volver</a></button>
 </form>
 {% endblock %}
