@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-<h2>Bienvenido a la aplicación CRUD</h2>
-<a href="{{ url_for('ingreso') }}">Ingresar Datos</a>
-<a href="{{ url_for('consulta') }}">Consultar Datos</a>
+<h2>Sistema de información - Ministerio Público Fiscal de la CABA</h2>
+<button class="btnInicio"><a href="{{ url_for('ingreso') }}">Ingresar Datos</a></button>
+<button class="btnInicio"><a href="{{ url_for('consulta') }}">Consultar Datos</a></button>
 {% endblock %}
