@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Ingreso de Datos</h2>
+<form method="POST">
+    Fecha: <input type="date" name="fecha"><br>
+    Tipo de Incidente: <input type="text" name="tipo_incidente"><br>
+    Subtipo de Incidente: <input type="text" name="subtipo_incidente"><br>
+    Uso de Arma: <input type="checkbox" name="uso_arma"><br>
+    Uso de Moto: <input type="checkbox" name="uso_moto"><br>
+    Dirección: <input type="text" name="direccion"><br>
+    Número: <input type="text" name="numero"><br>
+    <button type="submit">Guardar</button>
+</form>
+{% endblock %}
