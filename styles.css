@@ -1,9 +1,0 @@
-.contenedor{
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 50px;
-}
-
-h1{
-    font-style: italic;
-}
