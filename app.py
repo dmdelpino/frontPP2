@@ -26,6 +26,7 @@ def ingreso():
         uso_moto = bool(request.form.get('uso_moto'))
         direccion = request.form['direccion']
         numero = request.form['numero']
+        barrio = request.form['barrio']
         
         # Crear un nuevo incidente
         nuevo_incidente = Incidente(
@@ -35,7 +36,8 @@ def ingreso():
             uso_arma=uso_arma,
             uso_moto=uso_moto,
             direccion=direccion,
-            numero=numero
+            numero=numero,
+            barrio=barrio
         )
         db.session.add(nuevo_incidente)
         db.session.commit()
