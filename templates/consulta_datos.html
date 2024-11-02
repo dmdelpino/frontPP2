@@ -2,61 +2,98 @@
 {% block content %}
 <h2>Consulta de Datos</h2>
 <form method="POST">
-    Fecha: <input type="date" name="fecha"><br>
-    Tipo de Incidente: <input type="text" name="tipo_incidente"><br>
-    Subtipo de Incidente: <input type="text" name="subtipo_incidente"><br>
-    Uso de Arma: <input type="checkbox" name="uso_arma"><br>
-    Uso de Moto: <input type="checkbox" name="uso_moto"><br>
-    Barrio: 
-    <select type="text" name="barrio">
-        <option>Agronomía</option>
-        <option>Almagro</option>
-        <option>Balvanera</option>
-        <option>Barracas</option>
-        <option>Belgrano</option>
-        <option>Boca</option>
-        <option>Boedo</option>
-        <option>Caballito</option>
-        <option>Coghlan</option>
-        <option>Colegiales</option>
-        <option>Constitución</option>
-        <option>Flores</option>
-        <option>Floresta</option>
-        <option>Liniers</option>
-        <option>Mataderos</option>
-        <option>Monte Castro</option>
-        <option>Montserrat</option>
-        <option>Nueva Pompeya</option>
-        <option>Nuñez</option>
-        <option>Palermo</option>
-        <option>Parque Avellaneda</option>
-        <option>Parque Chacabuco</option>
-        <option>Parque Chas</option>
-        <option>Parque Patricios</option>
-        <option>Paternal</option>
-        <option>Puerto Madero</option>
-        <option>Recoleta</option>
-        <option>Retiro</option>
-        <option>Saavedra</option>
-        <option>San Cristóbal</option>
-        <option>San Nicolás</option>
-        <option>San Telmo</option>
-        <option>Versalles</option>
-        <option>Villa Crespo</option>
-        <option>Villa Devoto</option>
-        <option>Villa General Mitre</option>
-        <option>Villa Lugano</option>
-        <option>Villa Luro</option>
-        <option>Villa Ortúzar</option>
-        <option>Villa Pueyrredón</option>
-        <option>Villa Real</option>
-        <option>Villa Riachuelo</option>
-        <option>Villa Santa Rita</option>
-        <option>Villa Soldati</option>
-        <option>Villa Urquiza</option>
-        <option>Villa del Parque</option>
-        <option>Vélez Sarsfield</option>
-    </select><br>
+    <label> Fecha: </label><input type="date" name="fecha"><br>
+    <label>Tipo de Incidente: </label>
+        <select type="text" name="tipo_incidente">
+            <option>Vialidad</option>
+            <option>Lesiones</option>
+            <option>Amenazas</option>
+            <option>Hurto</option>
+            <option>Robo</option>
+            <option>Homicidios</option>
+        </select><br>
+    <label> Subtipo de Incidente: </label>
+        <select type="text" name="subtipo_incidente">
+            <option>Muertes por siniestros viales</option>
+            <option>Lesiones por siniestros viales</option>
+            <option>Lesiones Dolosas</option>
+            <option>Amenazas</option>
+            <option>Hurto total</option>
+            <option>Robo total</option>
+            <option>Hurto automotor</option>
+            <option>Robo automotor</option>
+            <option>Homicidio Doloso</option>
+        </select><br>
+    <label> Uso de Arma: </label><input type="checkbox" name="uso_arma"><br>
+    <label> Uso de Moto: </label><input type="checkbox" name="uso_moto"><br>
+    <label>Comuna: </label>
+        <select type="text" name="comuna">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+        </select><br>
+    <label> Barrio: </label>
+        <select type="text" name="barrio">
+            <option>Agronomía</option>
+            <option>Almagro</option>
+            <option>Balvanera</option>
+            <option>Barracas</option>
+            <option>Belgrano</option>
+            <option>Boca</option>
+            <option>Boedo</option>
+            <option>Caballito</option>
+            <option>Coghlan</option>
+            <option>Colegiales</option>
+            <option>Constitución</option>
+            <option>Flores</option>
+            <option>Floresta</option>
+            <option>Liniers</option>
+            <option>Mataderos</option>
+            <option>Monte Castro</option>
+            <option>Montserrat</option>
+            <option>Nueva Pompeya</option>
+            <option>Nuñez</option>
+            <option>Palermo</option>
+            <option>Parque Avellaneda</option>
+            <option>Parque Chacabuco</option>
+            <option>Parque Chas</option>
+            <option>Parque Patricios</option>
+            <option>Paternal</option>
+            <option>Puerto Madero</option>
+            <option>Recoleta</option>
+            <option>Retiro</option>
+            <option>Saavedra</option>
+            <option>San Cristóbal</option>
+            <option>San Nicolás</option>
+            <option>San Telmo</option>
+            <option>Versalles</option>
+            <option>Villa Crespo</option>
+            <option>Villa Devoto</option>
+            <option>Villa General Mitre</option>
+            <option>Villa Lugano</option>
+            <option>Villa Luro</option>
+            <option>Villa Ortúzar</option>
+            <option>Villa Pueyrredón</option>
+            <option>Villa Real</option>
+            <option>Villa Riachuelo</option>
+            <option>Villa Santa Rita</option>
+            <option>Villa Soldati</option>
+            <option>Villa Urquiza</option>
+            <option>Villa del Parque</option>
+            <option>Vélez Sarsfield</option>
+        </select><br>        
     <button type="submit">Consultar</button>
 </form>
 <br>

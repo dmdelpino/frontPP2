@@ -26,6 +26,7 @@ def ingreso():
         uso_moto = bool(request.form.get('uso_moto'))
         direccion = request.form['direccion']
         numero = request.form['numero']
+        comuna = request.form['comuna']
         barrio = request.form['barrio']
         
         # Crear un nuevo incidente
@@ -37,6 +38,7 @@ def ingreso():
             uso_moto=uso_moto,
             direccion=direccion,
             numero=numero,
+            comuna=comuna,
             barrio=barrio
         )
         db.session.add(nuevo_incidente)
@@ -55,8 +57,8 @@ def consulta():
             'subtipo_incidente': request.form.get('subtipo_incidente'),
             'uso_arma': request.form.get('uso_arma') == 'on',
             'uso_moto': request.form.get('uso_moto') == 'on',
-            'barrio': request.form.get('barrio'),
-            'comuna': request.form.get('comuna')
+            'comuna': request.form.get('comuna'),
+            'barrio': request.form.get('barrio')
         }
         # Redirige a los resultados con los filtros
         return redirect(url_for('resultados', **filtros))
@@ -79,10 +81,11 @@ def resultados():
         query = query.filter_by(uso_arma=True)
     if request.args.get('uso_moto') == 'True':
         query = query.filter_by(uso_moto=True)
-    if request.args.get('barrio'):
-        query = query.filter_by(barrio=request.args.get('barrio'))
     if request.args.get('comuna'):
         query = query.filter_by(comuna=request.args.get('comuna'))
+    if request.args.get('barrio'):
+        query = query.filter_by(barrio=request.args.get('barrio'))
+    
     
     resultados = query.all()
     return render_template('resultados.html', resultados=resultados)

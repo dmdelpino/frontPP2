@@ -12,5 +12,5 @@ class Incidente(db.Model):
     uso_moto = db.Column(db.Boolean, nullable=False)
     direccion = db.Column(db.String(100), nullable=False)
     numero = db.Column(db.String(10), nullable=False)
+    comuna = db.Column(db.String(2), nullable=True)
     barrio = db.Column(db.String(50), nullable=True)
-    comuna = db.Column(db.String(50), nullable=True)
