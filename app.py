@@ -71,20 +71,20 @@ def resultados():
     query = Incidente.query
 
     # Filtrar con cada campo si existe en la URL
-    if request.args.get('fecha'):
-        query = query.filter_by(fecha=datetime.strptime(request.args.get('fecha'), '%Y-%m-%d'))
-    if request.args.get('tipo_incidente'):
-        query = query.filter_by(tipo_incidente=request.args.get('tipo_incidente'))
-    if request.args.get('subtipo_incidente'):
-        query = query.filter_by(subtipo_incidente=request.args.get('subtipo_incidente'))
-    if request.args.get('uso_arma') == 'True':
-        query = query.filter_by(uso_arma=True)
-    if request.args.get('uso_moto') == 'True':
-        query = query.filter_by(uso_moto=True)
-    if request.args.get('comuna'):
-        query = query.filter_by(comuna=request.args.get('comuna'))
-    if request.args.get('barrio'):
-        query = query.filter_by(barrio=request.args.get('barrio'))
+#    if request.args.get('fecha'):
+#        query = query.filter_by(fecha=datetime.strptime(request.args.get('fecha'), '%Y-%m-%d'))
+#    if request.args.get('tipo_incidente'):
+#        query = query.filter_by(tipo_incidente=request.args.get('tipo_incidente'))
+#    if request.args.get('subtipo_incidente'):
+#        query = query.filter_by(subtipo_incidente=request.args.get('subtipo_incidente'))
+#    if request.args.get('uso_arma') == 'True':
+#        query = query.filter_by(uso_arma=True)
+#    if request.args.get('uso_moto') == 'True':
+#        query = query.filter_by(uso_moto=True)
+#    if request.args.get('comuna'):
+#        query = query.filter_by(comuna=request.args.get('comuna'))
+#    if request.args.get('barrio'):
+#       query = query.filter_by(barrio=request.args.get('barrio'))
     
     
     resultados = query.all()

@@ -3,7 +3,7 @@
 <h2>Resultados de la Consulta</h2>
 <table border="1">
     <tr>
-        <th>Fecha</th><th>Tipo</th><th>Subtipo</th><th>Uso de Arma</th><th>Uso de Moto</th><th>Dirección</th><th>Número</th>
+        <th>Fecha</th><th>Tipo</th><th>Subtipo</th><th>Uso de Arma</th><th>Uso de Moto</th><th>Comuna</th><th>Barrio</th>
     </tr>
     {% for incidente in resultados %}
     <tr>
@@ -12,8 +12,8 @@
         <td>{{ incidente.subtipo_incidente }}</td>
         <td>{{ incidente.uso_arma }}</td>
         <td>{{ incidente.uso_moto }}</td>
-        <td>{{ incidente.direccion }}</td>
-        <td>{{ incidente.numero }}</td>
+        <td>{{ incidente.comuna }}</td>
+        <td>{{ incidente.barrio }}</td>
     </tr>
     {% endfor %}
 </table>
